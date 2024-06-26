@@ -17,3 +17,22 @@ function displayBooks() {
 
     
 }
+
+function makeCard(book) {
+
+
+    const readButton = document.createElement("button");
+    readButton.textContent = "Read";
+    readButton.classList.toggle("ReadButton");
+    if (book.read) {
+        readButton.classList.toggle("read");
+    }
+    readButton.addEventListener("click", (event) => {
+        book.read = !book.read;
+        event.target.classList.toggle("read");
+       
+
+
+    })
+
+}
