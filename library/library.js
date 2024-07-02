@@ -27,6 +27,8 @@ function displayBooks() {
     
 }
 
+
+///create a book card along with its numbers and append to main grid
 function makeCard(book) {
     const main = document.querySelector(".main");
 
