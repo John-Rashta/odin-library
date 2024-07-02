@@ -7,6 +7,12 @@ function Book(title, author, pages, read) {
 	this.read = Boolean(read);
 }
 
+Book.prototype.status = function () {
+
+    this.read = !this.read;
+    
+}
+
 
 function addBookToLibrary(title, author, pages, read) {
 
@@ -61,8 +67,9 @@ function makeCard(book) {
     }
     
     readButton.addEventListener("click", () => {
-        book.read = !book.read;
+        book.status();
         readDiv.classList.toggle("read");
+        
        
     })
 
