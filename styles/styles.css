@@ -1,5 +1,4 @@
 /* by Matt Brictson from https://mattbrictson.com/blog/css-normalize-and-reset */
-@import "modern-normalize";
 
 :root {
   line-height: 1.5;
@@ -23,3 +22,102 @@ img {
   display: block;
   max-inline-size: 100%;
 }
+
+/* layout */
+
+body {
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  background-color: #38bdf8;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  overflow: auto;
+  padding: 20px;
+  background-color: #a5f3fc;
+}
+
+.header {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main > div {
+  background-color: #60a5fa;
+  border-radius: 20px;
+  padding: 5%;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  color: #f1f5f9;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.reading {
+  color: #b91c1c;
+}
+
+.reading.read {
+  color: #15803d;
+}
+
+.reading:not(.read)::before {
+  content: "Not ";
+}
+
+.reading:not(.read)::after {
+  content: " \00a0\2716";
+}
+
+.read::after {
+  content: " \00a0\2714";
+}
+
+/* form layout */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+form>div:not(.pageform) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+#pages {
+  width: 30%;
+  margin-left: 5px;
+  
+}
+
+#submit {
+  align-self: center;
+}
+
+.readform {
+  align-self: center;
+}
+

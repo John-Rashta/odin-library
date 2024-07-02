@@ -23,7 +23,6 @@ function makeCard(book) {
 
     const readButton = document.createElement("button");
     readButton.textContent = "Read";
-    readButton.classList.toggle("ReadButton");
     if (book.read) {
         readButton.classList.toggle("read");
     }
@@ -31,8 +30,28 @@ function makeCard(book) {
         book.read = !book.read;
         event.target.classList.toggle("read");
        
-
-
     })
 
 }
+
+
+const dialog = document.querySelector("dialog");
+const addButton = document.querySelector(".add");
+const submitButton = document.querySelector("#submit");
+
+addButton.addEventListener("click", () => {
+
+    dialog.showModal();
+
+});
+
+submitButton.addEventListener("click", (event) => {
+
+    event.preventDefault();
+    const bookform = document.querySelector("#bookform");
+    const formData = new FormData(bookform);
+    dialog.close();
+
+})
+
+
