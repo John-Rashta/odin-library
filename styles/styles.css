@@ -52,6 +52,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 20%;
 }
 
 .main > div {
@@ -121,3 +123,5 @@ form>div:not(.pageform) {
   align-self: center;
 }
 
+
+/* extra styling */

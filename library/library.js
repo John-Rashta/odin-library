@@ -125,3 +125,4 @@ submitButton.addEventListener("click", (event) => {
 })
 
 
+displayBooks();
