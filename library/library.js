@@ -58,9 +58,11 @@ function makeCard(book) {
 
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
+    deleteButton.classList.toggle("deletebutton");
 
     const readButton = document.createElement("button");
     readButton.textContent = "Read";
+    readButton.classList.toggle("readbutton");
     
     if (book.read) {
         readDiv.classList.toggle("read");
