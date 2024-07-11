@@ -1,16 +1,60 @@
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-    this.title = title;
-	this.author = author;
-	this.pages = pages;
-	this.read = Boolean(read);
-}
+class Book {
+    constructor(title, author, pages, read){
 
-Book.prototype.status = function () {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = Boolean(read);
 
-    this.read = !this.read;
-    
+    }
+
+    get title() {
+
+        return this._title;
+    }
+
+    set title(value) {
+
+        this._title = value;
+    }
+
+    get author() {
+
+        return this._author;
+    }
+
+    set author(value) {
+
+        this._author = value;
+    }
+
+    get pages() {
+
+        return this._pages;
+    }
+
+    set pages(value) {
+
+        this._pages = value;
+    }
+
+    get read() {
+
+        return this._read;
+    }
+
+    set read(value) {
+
+        this._read = value;
+    }
+
+    status() {
+
+        this._read = !this._read;
+    }
+
 }
 
 
